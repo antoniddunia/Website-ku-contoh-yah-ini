@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1020">
+<title>Tutorial Hosting Gratis — GitHub Pages</title>
+<style>
+:root{--bg:#080d1b;--panel:#101a32;--panel2:#132142;--line:#25416e;--text:#eef4ff;--muted:#b7c7e6;--blue:#38bdf8;--violet:#8b5cf6;--green:#22c55e;--shadow:0 16px 40px #0004}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:radial-gradient(ellipse at 75% 0%,#172a61 0,transparent 36%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:#70d8ff;text-decoration:none}a:hover{text-decoration:underline}button{font:inherit;cursor:pointer}
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px clamp(16px,4vw,48px);background:#080d1beF;backdrop-filter:blur(14px);border-bottom:1px solid #24416a}
+.brand{display:flex;align-items:center;gap:12px;font-weight:850;font-size:clamp(17px,2vw,24px);line-height:1.15}.brand-icon{display:grid;place-items:center;width:43px;height:43px;border-radius:14px;background:linear-gradient(135deg,#fff,#b8d9ff);color:#101a32;font-size:26px}.brand small{display:block;font-size:12px;font-weight:600;color:var(--blue);letter-spacing:.3px}
+.top-links{display:flex;gap:8px;flex-wrap:wrap}.top-links a{padding:8px 12px;border-radius:10px;color:var(--muted);font-size:14px}.top-links a:hover{background:#18284b;color:white;text-decoration:none}.free-pill{border:1px solid #4088c8;border-radius:99px;padding:7px 12px;font-size:12px;white-space:nowrap;color:#d9f5ff}
+.layout{display:grid;grid-template-columns:245px minmax(0,1fr);max-width:1500px;margin:auto}.sidebar{padding:22px 16px;border-right:1px solid #20365d;min-height:calc(100vh - 70px)}.side-title{font-size:12px;color:#8fa7cf;text-transform:uppercase;letter-spacing:1.3px;margin:4px 12px 12px}.side-nav{display:grid;gap:6px}.side-nav a{display:flex;align-items:center;gap:11px;padding:10px 12px;border-radius:11px;color:#dce8ff;font-size:14px}.side-nav a span{display:grid;place-items:center;width:24px;height:24px;border-radius:8px;background:#1d3157;color:#8bdcff;font-weight:800}.side-nav a:hover,.side-nav a.active{background:linear-gradient(100deg,#1d56d9,#1c3f95);text-decoration:none}.features{margin:24px 8px 0;padding-top:18px;border-top:1px solid #263d63;color:var(--muted);font-size:14px}.features p{margin:8px 0}.features b{color:#5ee6b0;margin-right:8px}.side-note{margin-top:25px;padding:18px;border-radius:16px;background:linear-gradient(145deg,#5b3ce6,#148bd6);box-shadow:var(--shadow)}.side-note strong{display:block;font-size:17px;margin:8px 0}.side-note p{font-size:13px;margin:6px 0 14px}.side-note a{display:inline-block;background:#07142e;color:white;padding:8px 13px;border-radius:99px;font-size:13px;font-weight:750}
+main{padding:24px clamp(16px,2.5vw,34px) 28px;min-width:0}.hero{position:relative;overflow:hidden;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:20px;padding:clamp(24px,4vw,45px);border:1px solid #2a61a6;border-radius:18px;background:linear-gradient(115deg,#17266d,#17265a 50%,#101d40);box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;width:260px;height:260px;right:-60px;top:-100px;border-radius:50%;background:#3182ff22;filter:blur(5px)}.eyebrow{display:inline-flex;align-items:center;gap:7px;padding:5px 10px;border:1px solid #4274c8;border-radius:99px;background:#0c1d4b;color:#9be8ff;font-size:12px;font-weight:800}.hero h1{font-size:clamp(28px,4vw,45px);line-height:1.12;letter-spacing:-1.3px;margin:13px 0}.hero p{color:#d2def7;margin:0;max-width:680px}.hero-art{position:relative;z-index:1;min-height:150px;display:grid;place-items:center}.browser-art{width:min(100%,310px);border:1px solid #5e7de7;border-radius:15px;background:#0d1530;box-shadow:0 20px 45px #0005;transform:rotate(2deg);padding:10px}.browser-top{display:flex;gap:5px;border-bottom:1px solid #273d69;padding:3px 4px 10px}.browser-top i{width:8px;height:8px;border-radius:50%;background:#62d9ff}.browser-body{padding:17px 8px;text-align:center}.code-symbol{font-size:40px;color:#6ce2ff;font-weight:900}.browser-body strong{display:block;font-size:16px}.browser-body small{color:#a9bde6}.checkmark{position:absolute;right:2%;bottom:4%;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--green);color:#062a19;font-size:25px;font-weight:900;border:4px solid #17265a}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:27px 0 13px}.section-head h2{font-size:21px;margin:0}.section-head p{color:var(--muted);font-size:13px;margin:0}.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:linear-gradient(150deg,#101b34,#0b1428);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 10px 25px #0002;scroll-margin-top:90px}.card:hover{border-color:#397bc0}.card-head{display:flex;align-items:center;gap:12px;margin-bottom:9px}.number{flex:0 0 40px;width:40px;height:40px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,#27c5fa,#2364e8);font-weight:900;font-size:20px;box-shadow:0 6px 15px #1e7ee944}.card h3{font-size:18px;line-height:1.3;margin:0}.card p{color:#d4e0f6;font-size:14px;margin:8px 0}.mini-panel{background:#0b1428;border:1px solid #29466f;border-radius:12px;padding:13px;margin-top:12px;font-size:13px}.mini-panel strong{color:#f3f7ff}.bullet{padding-left:18px;margin:8px 0;color:#d2def7}.bullet li{margin:4px 0}.codebox{border:1px solid #314e7d;background:#080e1d;border-radius:12px;overflow:hidden;margin-top:12px}.codehead{display:flex;align-items:center;justify-content:space-between;padding:8px 11px;background:#172543;color:#c8d8f4;font-size:12px}.copy-btn{border:1px solid #46638c;border-radius:7px;padding:4px 9px;background:#1b2d50;color:#e8f4ff;font-size:12px}.codebox pre{margin:0;padding:14px;overflow:auto;color:#b7f3d1;font-size:12px;line-height:1.6;white-space:pre}.mock-window{border:1px solid #38527b;border-radius:12px;background:#f8fbff;color:#15213b;padding:13px;margin-top:12px;font-size:12px}.mock-window .fake-title{font-weight:800;border-bottom:1px solid #d6dfed;padding-bottom:8px;margin-bottom:8px}.fake-input{border:1px solid #c6d4e9;border-radius:6px;padding:7px 9px;background:white;margin:6px 0}.fake-btn{display:inline-block;background:#159b5a;color:white;padding:7px 12px;border-radius:6px;font-weight:750;margin-top:5px}.mock-row{display:flex;gap:8px;flex-wrap:wrap}.mock-row span{border:1px solid #c6d4e9;padding:6px 8px;border-radius:6px;background:#fff}.success{border-color:#187e68;background:linear-gradient(145deg,#102b35,#0b1829)}.success .number{background:linear-gradient(135deg,#9d7aff,#6840e7)}.url-box{display:flex;gap:8px;align-items:center;background:linear-gradient(100deg,#0f9f65,#16a878);color:white;border-radius:11px;padding:11px 12px;margin:13px 0;font-weight:800;overflow-wrap:anywhere}.url-box span{flex:1;font-size:14px}.url-box button{border:1px solid #ffffff65;background:#ffffff1b;color:white;border-radius:7px;padding:6px 9px}.notice{display:flex;gap:10px;padding:13px;border-radius:12px;background:#182447;border:1px solid #344f8b;color:#d7e4ff;font-size:13px;margin-top:13px}.notice b{color:#a8edff}.faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.faq-grid details{border:1px solid var(--line);background:#101a30;border-radius:12px;padding:14px 16px}.faq-grid summary{cursor:pointer;font-weight:750}.faq-grid details p{font-size:14px;color:var(--muted);margin-bottom:0}.tips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.tip{padding:16px;border:1px solid var(--line);border-radius:13px;background:#101a30}.tip .emoji{font-size:23px}.tip strong{display:block;margin:5px 0}.tip p{font-size:13px;color:var(--muted);margin:0}.footer{border-top:1px solid #20365d;margin-top:28px;padding-top:18px;color:#9eb1d3;font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);background:#eafff4;color:#063d26;padding:11px 17px;border-radius:12px;font-weight:800;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s;z-index:20}.toast.show{opacity:1;transform:translate(-50%,0)}.progress{height:3px;background:#1a2948;position:fixed;top:0;left:0;right:0;z-index:30}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#32c5ff,#8b5cf6,#4ade80)}
+@media(max-width:950px){.layout{grid-template-columns:1fr}.sidebar{display:none}.hero{grid-template-columns:1fr .55fr}.steps{grid-template-columns:1fr 1fr}.top-links{display:none}}
+@media(max-width:650px){.topbar{padding:10px 14px}.free-pill{display:none}.layout main{padding:16px 12px}.hero{grid-template-columns:1fr;padding:24px 20px}.hero-art{min-height:130px}.steps,.faq-grid,.tips{grid-template-columns:1fr}.card{padding:16px}.section-head{align-items:start;flex-direction:column}.hero h1{font-size:31px}.browser-art{max-width:270px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+<header class="topbar">
+  <a class="brand" href="#beranda" aria-label="GitHub Pages tutorial beranda"><span class="brand-icon">⌘</span><span>GitHub Pages<small>Hosting Website Gratis untuk Semua</small></span></a>
+  <nav class="top-links" aria-label="Navigasi utama"><a href="#beranda">⌂ Beranda</a><a href="#tutorial">✦ Tutorial</a><a href="#faq">ⓘ FAQ</a><a href="#tips">♧ Tips</a></nav>
+  <div class="free-pill">⚡ 100% Gratis · HTTPS · Mudah</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+  <div class="side-title">Daftar tutorial</div>
+  <nav class="side-nav" id="sideNav">
+    <a class="active" href="#persiapan"><span>1</span> Persiapan</a>
+    <a href="#repository"><span>2</span> Buat Repository</a>
+    <a href="#upload"><span>3</span> Upload File</a>
+    <a href="#aktifkan"><span>4</span> Aktifkan Pages</a>
+    <a href="#link"><span>5</span> Dapatkan Link HTTPS</a>
+  </nav>
+  <div class="features"><strong>Fitur Website</strong><p><b>✓</b> HTML, CSS, JavaScript</p><p><b>✓</b> Link HTTPS gratis</p><p><b>✓</b> Bisa update kapan saja</p><p><b>✓</b> Tanpa domain & hosting berbayar</p></div>
+  <div class="side-note"><div style="font-size:27px">⌘</div><strong>Siap membangun website sendiri?</strong><p>Ikuti langkah-langkah ini secara berurutan, langsung dari HP.</p><a href="#persiapan">Ayo mulai! →</a></div>
+</aside>
+<main id="beranda">
+  <section class="hero">
+    <div><span class="eyebrow">✦ PANDUAN PEMULA · ANDROID & PC</span><h1>Tutorial Lengkap Hosting Website di GitHub</h1><p>Ubah file HTML, CSS, dan JavaScript kamu menjadi website online dengan link HTTPS secara gratis, langsung dari browser HP!</p></div>
+    <div class="hero-art" aria-hidden="true"><div class="browser-art"><div class="browser-top"><i></i><i></i><i></i></div><div class="browser-body"><div class="code-symbol">&lt;/&gt;</div><strong>Website kamu, online!</strong><small>HTML · CSS · JavaScript</small></div></div><div class="checkmark">✓</div></div>
+  </section>
+  <div class="section-head" id="tutorial"><div><h2>Ikuti 5 langkah berikut</h2><p>Estimasi 5–15 menit, tergantung koneksi dan ukuran file.</p></div></div>
+  <section class="steps">
+    <article class="card" id="persiapan">
+      <div class="card-head"><span class="number">1</span><h3>Buat atau login akun GitHub</h3></div>
+      <p>Buka <a href="https://github.com/" target="_blank" rel="noopener">github.com</a> melalui Chrome di HP. Daftar jika belum punya akun, atau login jika sudah punya.</p>
+      <div class="mock-window"><div class="fake-title">GitHub · Mulai di sini</div><p>Platform untuk menyimpan kode dan menerbitkan website statis.</p><div class="mock-row"><span>Sign up</span><span>Log in</span></div></div>
+      <div class="notice"><span>💡</span><div><b>Tips:</b> Gunakan email yang bisa kamu akses. Simpan username karena akan menjadi bagian dari link website.</div></div>
+    </article>
+    <article class="card" id="repository">
+      <div class="card-head"><span class="number">2</span><h3>Buat repository baru</h3></div>
+      <p>Buka halaman <a href="https://github.com/new" target="_blank" rel="noopener">github.com/new</a> untuk membuat tempat menyimpan file website.</p>
+      <div class="mini-panel"><strong>Pengaturan yang disarankan</strong><ul class="bullet"><li><b>Repository name:</b> <code>websiteku</code> (nama bebas)</li><li>Pilih <b>Public</b> agar mudah diterbitkan lewat GitHub Pages gratis.</li><li>Centang <b>Add a README file</b> (opsional, tapi membantu).</li><li>Tekan <b>Create repository</b>.</li></ul></div>
+      <p>Hindari memasukkan kata sandi, token rahasia, atau data pribadi ke repository publik.</p>
+    </article>
+    <article class="card" id="upload">
+      <div class="card-head"><span class="number">3</span><h3>Upload file website</h3></div>
+      <p>Di halaman repository, pilih <b>Add file → Create new file</b>. Beri nama file utama <code>index.html</code>, tempel kode HTML, lalu pilih <b>Commit changes</b>.</p>
+      <div class="codebox"><div class="codehead"><span>index.html · contoh minimal</span><button class="copy-btn" data-copy="html-example">Salin kode</button></div><pre id="html-example">&lt;!doctype html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title>Website Saya&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Halo! Website saya sudah online 🎉&lt;/h1&gt;
+  &lt;p&gt;Diterbitkan gratis dengan GitHub Pages.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+      <p>Kalau CSS dan JS berada di file terpisah, upload juga, misalnya <code>style.css</code> dan <code>script.js</code>, lalu pastikan nama dan jalurnya sesuai dengan kode HTML.</p>
+      <div class="notice"><span>📱</span><div>Untuk file yang sudah ada di HP, buka <b>Add file → Upload files</b> jika tersedia. Pilih file dari penyimpanan, lalu commit perubahan. Untuk banyak file sekaligus, unggah satu per satu atau gunakan komputer jika lebih praktis.</div></div>
+    </article>
+    <article class="card" id="aktifkan">
+      <div class="card-head"><span class="number">4</span><h3>Aktifkan GitHub Pages</h3></div>
+      <p>Buka tab <b>Settings</b> pada repository, cari <b>Pages</b>, lalu atur sumber penerbitannya.</p>
+      <div class="mock-window"><div class="fake-title">Settings → Pages</div><div>Build and deployment</div><div class="fake-input">Source: Deploy from a branch ▾</div><div>Branch</div><div class="mock-row"><span>main ▾</span><span>/ (root) ▾</span><span style="background:#159b5a;color:white">Save</span></div></div>
+      <ul class="bullet"><li><b>Source:</b> Deploy from a branch</li><li><b>Branch:</b> <code>main</code></li><li><b>Folder:</b> <code>/(root)</code> jika <code>index.html</code> ada di folder utama.</li><li>Tekan <b>Save</b>.</li></ul>
+      <p>Jika file utama kamu berada di folder <code>/docs</code>, pilih folder itu hanya jika memang struktur proyekmu menggunakannya.</p>
+    </article>
+    <article class="card" id="link">
+      <div class="card-head"><span class="number">5</span><h3>Dapatkan link HTTPS</h3></div>
+      <p>Tunggu beberapa menit hingga proses deployment selesai. Buka kembali <b>Settings → Pages</b>, lalu tekan <b>Visit site</b> jika sudah muncul.</p>
+      <div class="mock-window"><div class="fake-title">GitHub Pages · Your site is live</div><p style="color:#087849">✓ Your site is published at:</p><code>https://username.github.io/websiteku/</code><div><span class="fake-btn">Visit site ↗</span></div></div>
+      <p>Link biasanya berbentuk seperti contoh di atas. Ganti <code>username</code> dengan username GitHub dan <code>websiteku</code> dengan nama repository kamu.</p>
+      <div class="notice"><span>🔒</span><div>HTTPS disediakan oleh GitHub Pages. Jika link belum bisa dibuka, tunggu sebentar dan periksa kembali status deployment.</div></div>
+    </article>
+    <article class="card success">
+      <div class="card-head"><span class="number">✓</span><h3>Selesai! Website siap dibagikan</h3></div>
+      <p>Masukkan username dan nama repository kamu untuk menyusun link perkiraan. Ini hanya membuat contoh URL, bukan memeriksa apakah website sudah diterbitkan.</p>
+      <label for="username" style="display:block;font-size:13px;margin-top:12px">Username GitHub</label><input id="username" autocomplete="off" placeholder="contoh: namakamu" style="width:100%;padding:10px;border-radius:9px;border:1px solid #37547b;background:#091326;color:white;margin:5px 0 10px">
+      <label for="repo" style="display:block;font-size:13px">Nama repository</label><input id="repo" autocomplete="off" value="websiteku" placeholder="contoh: websiteku" style="width:100%;padding:10px;border-radius:9px;border:1px solid #37547b;background:#091326;color:white;margin:5px 0">
+      <div class="url-box"><span id="generatedUrl">https://username.github.io/websiteku/</span><button id="copyUrl" type="button" aria-label="Salin link">▢ Salin</button></div>
+      <small style="color:#b8c9e8">Pastikan URL yang dihasilkan sama dengan alamat di menu Pages sebelum membagikannya.</small>
+      <div class="mini-panel"><strong>Yang kamu dapat</strong><ul class="bullet"><li>Hosting website statis gratis.</li><li>Link HTTPS yang bisa dibagikan.</li><li>Bisa memperbarui website kapan saja dengan mengedit dan commit file.</li></ul></div>
+    </article>
+  </section>
+  <section id="faq">
+    <div class="section-head"><div><h2>FAQ — pertanyaan umum</h2><p>Jawaban singkat untuk masalah yang sering muncul.</p></div></div>
+    <div class="faq-grid">
+      <details><summary>Apakah benar-benar gratis?</summary><p>GitHub Pages menyediakan hosting gratis untuk situs statis pada batas dan ketentuan layanan GitHub. Kamu tidak wajib membeli domain sendiri.</p></details>
+      <details><summary>Kenapa muncul 404 / halaman tidak ditemukan?</summary><p>Periksa apakah file bernama tepat <code>index.html</code>, berada di folder sumber yang dipilih, dan perubahan sudah di-commit. Pastikan URL dan nama repository benar.</p></details>
+      <details><summary>Apakah bisa menghosting PHP atau database?</summary><p>GitHub Pages hanya untuk konten statis. PHP yang perlu dijalankan di server, backend, dan database server memerlukan layanan lain.</p></details>
+      <details><summary>Bagaimana cara memperbarui website?</summary><p>Edit atau upload ulang file di repository, lalu commit perubahan. GitHub Pages akan membangun ulang situs secara otomatis.</p></details>
+      <details><summary>Apakah teman bisa melihat kode saya?</summary><p>Jika repository bersifat publik, orang lain dapat melihat kode sumbernya. Jangan simpan password, API key rahasia, atau data sensitif di dalamnya.</p></details>
+      <details><summary>Bisakah memakai domain sendiri?</summary><p>Bisa, jika kamu memiliki domain. Namun itu opsional; subdomain github.io gratis sudah cukup untuk membagikan website.</p></details>
+    </div>
+  </section>
+  <section id="tips">
+    <div class="section-head"><div><h2>Tips supaya website lancar</h2><p>Checklist sebelum membagikan link ke teman.</p></div></div>
+    <div class="tips">
+      <div class="tip"><div class="emoji">📁</div><strong>Periksa struktur file</strong><p>Nama file, huruf besar-kecil, dan jalur CSS/JS harus cocok dengan referensi di HTML.</p></div>
+      <div class="tip"><div class="emoji">📱</div><strong>Uji di HP</strong><p>Buka link di Chrome Android dan cek tampilan di layar kecil serta tombol-tombolnya.</p></div>
+      <div class="tip"><div class="emoji">🔐</div><strong>Jaga informasi rahasia</strong><p>Repository publik bukan tempat menyimpan password, token, atau data pribadi.</p></div>
+    </div>
+  </section>
+  <footer class="footer"><span>♥ Semoga tutorial ini membantu kamu menerbitkan website pertamamu.</span><span>Dokumentasi resmi: <a href="https://docs.github.com/pages" target="_blank" rel="noopener">docs.github.com/pages ↗</a></span></footer>
+</main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite">Tersalin!</div>
+<script>
+(function(){
+  const toast=document.getElementById('toast');
+  let toastTimer;
+  function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2200)}
+  async function copyText(value){
+    try{
+      if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(value)}
+      else{const area=document.createElement('textarea');area.value=value;area.style.position='fixed';area.style.opacity='0';document.body.appendChild(area);area.select();const ok=document.execCommand('copy');area.remove();if(!ok)throw new Error('copy failed')}
+      showToast('Berhasil disalin!');
+    }catch(e){showToast('Tidak bisa menyalin otomatis — salin teks secara manual.')}
+  }
+  document.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',()=>{
+    const target=document.getElementById(button.dataset.copy);if(target)copyText(target.innerText);
+  }));
+  const user=document.getElementById('username'),repo=document.getElementById('repo'),url=document.getElementById('generatedUrl');
+  function updateUrl(){
+    const u=user.value.trim().replace(/^@/,'').replace(/[^a-zA-Z0-9-]/g,'');
+    const r=repo.value.trim().replace(/\s+/g,'-').replace(/[^a-zA-Z0-9._-]/g,'');
+    url.textContent='https://'+(u||'username')+'.github.io/'+(r||'nama-repository')+'/';
+  }
+  user.addEventListener('input',updateUrl);repo.addEventListener('input',updateUrl);
+  document.getElementById('copyUrl').addEventListener('click',()=>copyText(url.textContent));
+  const progress=document.getElementById('progressBar');
+  function updateProgress(){const doc=document.documentElement;const max=doc.scrollHeight-doc.clientHeight;progress.style.width=(max>0?(doc.scrollTop/max)*100:0)+'%'}
+  window.addEventListener('scroll',updateProgress,{passive:true});window.addEventListener('resize',updateProgress);updateProgress();
+  const navLinks=[...document.querySelectorAll('#sideNav a')];
+  const targets=navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if('IntersectionObserver' in window){
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id))}}),{rootMargin:'-25% 0px -60% 0px'});
+    targets.forEach(target=>observer.observe(target));
+  }
+})();
+</script>
+</body>
+</html>
